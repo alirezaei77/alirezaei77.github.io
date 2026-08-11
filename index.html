@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <!-- متا تگ‌ها -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="رزومه حرفه‌ای چندزبانه">
+    
+    <!-- امنیت Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <title>رزومه من | چندزبانه</title>
+    
+    <!-- فونت‌ها -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== RESET & BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7c3aed;
+            --background-color: #ffffff;
+            --text-color: #1f2937;
+            --card-bg: #f9fafb;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'Inter', sans-serif;
+            min-height: 100vh;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* ========== THEME STYLES ========== */
+        [data-theme="light"] {
+            --primary-color: #ff6b8b;
+            --secondary-color: #4ecdc4;
+            --background-color: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --text-color: #2c3e50;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --border-color: rgba(255, 255, 255, 0.3);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        [data-theme="cyberpunk"] {
+            --primary-color: #00ff00;
+            --secondary-color: #ff00ff;
+            --background-color: #0a0a0a;
+            --text-color: #00ff00;
+            --card-bg: rgba(10, 10, 10, 0.9);
+            --border-color: rgba(0, 255, 0, 0.3);
+            --shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            --header-bg: rgba(10, 10, 10, 0.95);
+            font-family: 'Courier New', monospace, 'Vazirmatn';
+        }
+
+        [data-theme="glass"] {
+            --primary-color: #6c5ce7;
+            --secondary-color: #fd79a8;
+            --background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --text-color: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.15);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --header-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="gradient"] {
+            --primary-color: #e94057;
+            --secondary-color: #8a2387;
+            --background-color: radial-gradient(circle at 20% 80%, #141e30 0%, #243b55 100%);
+            --text-color: #ffffff;
+            --card-bg: rgba(36, 59, 85, 0.8);
+            --border-color: rgba(233, 64, 87, 0.3);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --header-bg: rgba(20, 30, 48, 0.9);
+        }
+
+        [data-theme="pastel"] {
+            --primary-color: #ff8ba7;
+            --secondary-color: #78c4d4;
+            --background-color: #faf4ff;
+            --text-color: #5a5560;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --border-color: rgba(255, 214, 224, 0.5);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --header-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        /* ========== NAVIGATION HEADER ========== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar {
+            padding: 0 20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* ========== LANGUAGE SELECTOR ========== */
+        .language-selector-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .current-language {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .current-language:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .flag-icon {
+            font-size: 1.2rem;
+        }
+
+        .lang-name {
+            font-weight: 500;
+        }
+
+        .dropdown-icon {
+            font-size: 0.8rem;
+            margin-right: auto;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-top: 5px;
+            display: none;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .language-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .lang-option:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-native {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-right: auto;
+        }
+
+        /* ========== THEME SELECTOR ========== */
+        .theme-selector {
+            position: relative;
+        }
+
+        .theme-toggle-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            padding: 8px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            justify-content: center;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .theme-icon {
+            font-size: 1.2rem;
+        }
+
+        .theme-text {
+            font-weight: 500;
+        }
+
+        .theme-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 5px;
+            min-width: 180px;
+            display: none;
+            z-index: 1001;
+            backdrop-filter: blur(15px);
+            box-shadow: var(--shadow);
+        }
+
+        .theme-menu.show {
+            display: block;
+        }
+
+        .theme-option {
+            width: 100%;
+            padding: 12px 15px;
+            text-align: right;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: background 0.3s;
+            color: var(--text-color);
+            font-family: inherit;
+            margin-bottom: 5px;
+        }
+
+        .theme-option:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .theme-option span:first-child {
+            font-size: 1.3rem;
+        }
+
+        /* ========== MOBILE MENU ========== */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-color);
+            transition: 0.3s;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            padding: 60px 20px;
+            background: transparent;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* ========== MAIN GRID ========== */
+        .main-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        /* ========== CARD STYLES ========== */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .card-content {
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .card-actions {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            border: 1px solid var(--primary-color);
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        /* ========== SKILLS STYLES ========== */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        /* ========== TIMELINE STYLES ========== */
+        .timeline-card .card-content {
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* ========== PROJECTS STYLES ========== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ========== PUBLICATIONS STYLES ========== */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .publication-item {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .publication-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .publication-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ========== CONTACT STYLES ========== */
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(-5px);
+        }
+
+        .contact-item i {
+            font-style: normal;
+            font-size: 1.3rem;
+        }
+
+        /* ========== DETAILS VIEW STYLES ========== */
+        .details-view {
+            min-height: calc(100vh - 80px);
+            background: var(--background-color);
+            padding: 40px 20px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .details-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .details-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .details-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .back-to-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .back-to-main:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .back-to-main i {
+            font-style: normal;
+            font-size: 1.2rem;
+        }
+
+        .details-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .detail-section {
+            margin-bottom: 40px;
+        }
+
+        .detail-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .detail-section h2 i {
+            font-style: normal;
+            font-size: 2.2rem;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .detail-item {
+            margin-bottom: 25px;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .detail-value {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .detail-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .detail-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        .detail-timeline {
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .detail-timeline::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .detail-timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-right: 25px;
+        }
+
+        .detail-timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+
+        .detail-timeline-date {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+        }
+
+        .detail-timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .detail-timeline-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .detail-timeline-content ul {
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        .detail-timeline-content li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .detail-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .detail-project-card {
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .detail-project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .detail-project-image {
+            height: 220px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .detail-project-info {
+            padding: 25px;
+        }
+
+        .detail-project-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .detail-project-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .detail-project-info strong {
+            color: var(--primary-color);
+        }
+
+        .detail-publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .detail-publication-item {
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 15px;
+            border-right: 5px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .detail-publication-item:hover {
+            transform: translateX(-5px);
+        }
+
+        .detail-publication-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .detail-publication-item p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .detail-skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .detail-skill-category {
+            margin-bottom: 30px;
+        }
+
+        .detail-skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .detail-skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-skill-item {
+            margin-bottom: 15px;
+        }
+
+        .detail-skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .detail-skill-bar {
+            height: 12px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .detail-skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 6px;
+            transition: width 1s ease;
+        }
+
+        /* ========== SPECIAL THEME EFFECTS ========== */
+        [data-theme="cyberpunk"] body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px) 0 0 / 50px 50px,
+                        linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px) 0 0 / 50px 50px;
+            pointer-events: none;
+            z-index: -1;
+            animation: cyberpunkGrid 20s linear infinite;
+        }
+
+        @keyframes cyberpunkGrid {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        [data-theme="glass"] .card,
+        [data-theme="glass"] .language-dropdown,
+        [data-theme="glass"] .theme-menu,
+        [data-theme="glass"] .details-content {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        [data-theme="light"] .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 107, 139, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        [data-theme="pastel"] .card {
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 214, 224, 0.3) 0%, transparent 20%),
+                            radial-gradient(circle at 90% 80%, rgba(193, 240, 249, 0.3) 0%, transparent 20%);
+        }
+
+        [data-theme="gradient"] .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="gradient"] .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233, 64, 87, 0.1) 0%, transparent 70%);
+            animation: gradientRotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-actions {
+                order: 3;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 10px;
+                display: none;
+            }
+
+            .nav-actions.show {
+                display: flex;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .theme-menu {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 300px;
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+
+            .language-dropdown {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 300px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .details-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .details-header h1 {
+                font-size: 2rem;
+            }
+            
+            .details-content {
+                padding: 25px;
+            }
+            
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-timeline-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .card-title {
+                font-size: 1.3rem;
+            }
+
+            .theme-toggle-btn {
+                min-width: 80px;
+                padding: 6px 15px;
+            }
+
+            .current-language {
+                min-width: 100px;
+                padding: 6px 12px;
+            }
+        }
+
+        /* ========== ACCESSIBILITY ========== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.2s; }
+        .card:nth-child(4) { animation-delay: 0.3s; }
+        .card:nth-child(5) { animation-delay: 0.4s; }
+        .card:nth-child(6) { animation-delay: 0.5s; }
+
+        /* ========== UTILITY CLASSES ========== */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .mt-20 { margin-top: 20px; }
+        .mb-20 { margin-bottom: 20px; }
+        .p-20 { padding: 20px; }
+
+        /* ========== SCROLLBAR STYLING ========== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--card-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body data-theme="light" data-lang="fa">
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <span class="logo-text">رزومه حرفه‌ای</span>
+                    </a>
+                </div>
+                
+                <div class="nav-actions" id="navActions">
+                    <div class="language-selector-container" id="languageSelector">
+                        <div class="current-language">
+                            <span class="flag-icon">🇮🇷</span>
+                            <span class="lang-name">فارسی</span>
+                            <i class="dropdown-icon">▼</i>
+                        </div>
+                        <div class="language-dropdown">
+                            <div class="lang-option" data-lang="fa" data-dir="rtl">
+                                <span class="flag-icon">🇮🇷</span>
+                                <span class="lang-name">فارسی</span>
+                                <span class="lang-native">(Persian)</span>
+                            </div>
+                            <div class="lang-option" data-lang="fr" data-dir="ltr">
+                                <span class="flag-icon">🇫🇷</span>
+                                <span class="lang-name">Français</span>
+                                <span class="lang-native">(French)</span>
+                            </div>
+                            <div class="lang-option" data-lang="en" data-dir="ltr">
+                                <span class="flag-icon">🇬🇧</span>
+                                <span class="lang-name">English</span>
+                                <span class="lang-native">(English)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="theme-selector">
+                        <button class="theme-toggle-btn" id="themeToggle" aria-label="تغییر تم">
+                            <span class="theme-icon">🎨</span>
+                            <span class="theme-text">تم</span>
+                        </button>
+                        <div class="theme-menu" id="themeMenu">
+                            <button class="theme-option" data-theme="light">
+                                <span>🎨</span>
+                                <span>Aurora</span>
+                            </button>
+                            <button class="theme-option" data-theme="cyberpunk">
+                                <span>🤖</span>
+                                <span>Cyberpunk</span>
+                            </button>
+                            <button class="theme-option" data-theme="glass">
+                                <span>🪟</span>
+                                <span>Glass</span>
+                            </button>
+                            <button class="theme-option" data-theme="gradient">
+                                <span>🌈</span>
+                                <span>Gradient</span>
+                            </button>
+                            <button class="theme-option" data-theme="pastel">
+                                <span>🍬</span>
+                                <span>Pastel</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="منو">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="F:\New folder (7)/profile.jpg" 
+                     alt="Profile" 
+                     class="profile-image"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Ccircle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22%232563eb%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 dy=%220.3em%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2280%22 font-family=%22Arial%22%3EAR%3C/text%3E%3C/svg%3E'">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">علی رضایی</h1>
+                <p class="hero-subtitle">دانشجو ارشد هوش مصنوعی | طراح و توسعه دهنده وب و وردپرس | مدرس هوش مصنوعی و برنامه نویسی</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="main-grid" id="mainGrid">
+        <section class="card" id="bio">
+            <div class="card-header">
+                <h2 class="card-title">بیوگرافی</h2>
+                <span class="card-icon">👤</span>
+            </div>
+            <div class="card-content">
+                <p class="card-text">
+                    دانشجوی کارشناسی ارشد هوش مصنوعی و رباتیک. علاقه‌مند به تکنولوژی‌های تازه و حل مسائل پیچیده با استفاده از کدنویسی خلاقانه.
+                </p>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('bio')">
+                        بیشتر بخوانید ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="skills">
+            <div class="card-header">
+                <h2 class="card-title">مهارت‌های فنی</h2>
+                <span class="card-icon">💻</span>
+            </div>
+            <div class="card-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AI/ML</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('skills')">
+                        مشاهده همه مهارت‌ها ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card timeline-card" id="experience">
+            <div class="card-header">
+                <h2 class="card-title">تجربیات شغلی</h2>
+                <span class="card-icon">💼</span>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">۲۰۲۱ - اکنون</div>
+                    <div class="timeline-content">
+                        <h3>توسعه‌دهنده ارشد</h3>
+                        <p>شرکت فناوری اطلاعات پیشرو</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">۲۰۱۹ - ۲۰۲۱</div>
+                    <div class="timeline-content">
+                        <h3>توسعه‌دهنده وب</h3>
+                        <p>استارت‌آپ تکنولوژی</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">۲۰۱۷ - ۲۰۱۹</div>
+                    <div class="timeline-content">
+                        <h3>برنامه‌نویس</h3>
+                        <p>شرکت نرم‌افزاری</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="read-more" onclick="showDetails('experience')">
+                    مشاهده جزئیات ←
+                </button>
+            </div>
+        </section>
+
+        <section class="card" id="projects">
+            <div class="card-header">
+                <h2 class="card-title">پروژه‌های منتخب</h2>
+                <span class="card-icon">🚀</span>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width:100%;height:180px;background:linear-gradient(45deg, var(--primary-color), var(--secondary-color));display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;">
+                            AI
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>سیستم تشخیص هوشمند</h3>
+                        <p>تشخیص تصویر با هوش مصنوعی</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width:100%;height:180px;background:linear-gradient(45deg, var(--primary-color), var(--secondary-color));display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;">
+                            CMS
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>سیستم مدیریت محتوا</h3>
+                        <p>توسعه CMS با React و Node.js</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="read-more" onclick="showDetails('projects')">
+                    مشاهده همه پروژه‌ها ←
+                </button>
+            </div>
+        </section>
+
+        <section class="card" id="publications">
+            <div class="card-header">
+                <h2 class="card-title">مقالات و تألیفات</h2>
+                <span class="card-icon">📚</span>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3>مقاله در کنفرانس بین‌المللی AI</h3>
+                    <p>۲۰۲۳ - موضوع: هوش مصنوعی در وب</p>
+                </div>
+                <div class="publication-item">
+                    <h3>کتاب آموزش React پیشرفته</h3>
+                    <p>۲۰۲۲ - انتشارات فنی ایران</p>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="read-more" onclick="showDetails('publications')">
+                    مشاهده همه ←
+                </button>
+            </div>
+        </section>
+
+        <section class="card" id="education">
+            <div class="card-header">
+                <h2 class="card-title">تحصیلات</h2>
+                <span class="card-icon">🎓</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۴۰۳ - اکنون</div>
+                        <div class="timeline-content">
+                            <h3>کارشناسی ارشد</h3>
+                            <p>مهندسی کامپیوتر - هوش مصنوعی</p>
+                            <p>دانشگاه سمنان</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۳۹۷ - ۱۴۰۳</div>
+                        <div class="timeline-content">
+                            <h3>کارشناسی</h3>
+                            <p>مهندسی کامپیوتر - فناوری اطلاعات</p>
+                            <p>دانشگاه ایرانیان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('education')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="language">
+            <div class="card-header">
+                <h2 class="card-title">زبان های مسلط</h2>
+                <span class="card-icon">🗣️</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>فارسی </h3>
+                            <p>زبان مادری</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>فرانسوی</h3>
+                            <p>DELF: 100</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>انگلیسی</h3>
+                            <p>TOEFL: 110</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('language')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="membership">
+            <div class="card-header">
+                <h2 class="card-title">عضویت ها</h2>
+                <span class="card-icon">🤝</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>عضویت در انجمن کامپیوتر ایران</h3>
+                            <p>عضو پیوسته</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>عضویت در IEEE</h3>
+                            <p>عضویت دانشجویی</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('membership')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="assemblies">
+            <div class="card-header">
+                <h2 class="card-title">مجامع و رویداد ها</h2>
+                <span class="card-icon">👥</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۴۰۲</div>
+                        <div class="timeline-content">
+                            <h3>کنفرانس بین المللی AI</h3>
+                            <p>ارائه مقاله</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۴۰۱</div>
+                        <div class="timeline-content">
+                            <h3>همایش توسعه دهندگان وب</h3>
+                            <p>سخنران</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('assemblies')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="awards">
+            <div class="card-header">
+                <h2 class="card-title">جوایز و افتخارات</h2>
+                <span class="card-icon">🏆</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۴۰۲</div>
+                        <div class="timeline-content">
+                            <h3>جایزه بهترین مقاله دانشجویی</h3>
+                            <p>کنفرانس بین المللی AI</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">۱۴۰۱</div>
+                        <div class="timeline-content">
+                            <h3>رتبه اول مسابقات برنامه نویسی</h3>
+                            <p>دانشگاه تهران</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('awards')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="interest">
+            <div class="card-header">
+                <h2 class="card-title">علاقه مندی ها</h2>
+                <span class="card-icon">⭐</span>
+            </div>
+            <div class="card-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>مطالعه کتب علمی</h3>
+                            <p>علاقه مند به فیزیک و نجوم</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>نواختن ویولن</h3>
+                            <p>۱۰ سال سابقه</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date"></div>
+                        <div class="timeline-content">
+                            <h3>سفر و عکاسی</h3>
+                            <p>علاقه مند به طبیعت گردی</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="read-more" onclick="showDetails('interest')">
+                        مشاهده جزئیات ←
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card contact-card" id="contact">
+            <div class="card-header">
+                <h2 class="card-title">راه‌های ارتباطی</h2>
+                <span class="card-icon">📞</span>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <i>📧</i>
+                    <span>ali.rezaei1397a@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i>📱</i>
+                    <span>+98 912 345 6789</span>
+                </div>
+                <div class="contact-item">
+                    <i>💼</i>
+                    <span>linkedin.com/in/ali-rezaei</span>
+                </div>
+                <div class="contact-item">
+                    <i>🐙</i>
+                    <span>github.com/ali-rezaei</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button onclick="copyEmail()" class="read-more">
+                    کپی ایمیل
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Details View (مخفی در ابتدا) -->
+    <div id="detailsView" class="details-view" style="display: none;">
+        <div class="details-container">
+            <div class="details-header">
+                <button class="back-to-main" id="backToMain">
+                    <i>←</i>
+                    <span>بازگشت به صفحه اصلی</span>
+                </button>
+                <h1 id="detailsTitle">جزئیات</h1>
+            </div>
+            <div id="detailsContent" class="details-content">
+                <!-- محتوای جزئیات با جاوااسکریپت پر می‌شود -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== THEME MANAGEMENT ==========
+        const themeToggle = document.getElementById('themeToggle');
+        const themeMenu = document.getElementById('themeMenu');
+        const themeOptions = document.querySelectorAll('.theme-option');
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem('website-theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeButton(savedTheme);
+
+        themeToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            themeMenu.classList.toggle('show');
+        });
+
+        themeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const theme = option.getAttribute('data-theme');
+                changeTheme(theme);
+                themeMenu.classList.remove('show');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!themeMenu.contains(e.target) && !themeToggle.contains(e.target)) {
+                themeMenu.classList.remove('show');
+            }
+        });
+
+        function changeTheme(theme) {
+            body.style.opacity = '0.8';
+            setTimeout(() => {
+                body.setAttribute('data-theme', theme);
+                localStorage.setItem('website-theme', theme);
+                updateThemeButton(theme);
+                setTimeout(() => {
+                    body.style.opacity = '1';
+                }, 50);
+            }, 150);
+        }
+
+        function updateThemeButton(theme) {
+            const themeIcons = {
+                'light': '🎨',
+                'cyberpunk': '🤖',
+                'glass': '🪟',
+                'gradient': '🌈',
+                'pastel': '🍬'
+            };
+            const themeNames = {
+                'light': 'Aurora',
+                'cyberpunk': 'Cyberpunk',
+                'glass': 'Glass',
+                'gradient': 'Gradient',
+                'pastel': 'Pastel'
+            };
+            themeToggle.querySelector('.theme-icon').textContent = themeIcons[theme];
+            themeToggle.querySelector('.theme-text').textContent = themeNames[theme];
+        }
+
+        // ========== LANGUAGE MANAGEMENT ==========
+        const languageSelector = document.getElementById('languageSelector');
+        const currentLanguage = languageSelector.querySelector('.current-language');
+        const languageDropdown = languageSelector.querySelector('.language-dropdown');
+        const langOptions = document.querySelectorAll('.lang-option');
+
+        currentLanguage.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('show');
+        });
+
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                const dir = option.getAttribute('data-dir');
+                const flag = option.querySelector('.flag-icon').textContent;
+                const name = option.querySelector('.lang-name').textContent;
+                
+                currentLanguage.querySelector('.flag-icon').textContent = flag;
+                currentLanguage.querySelector('.lang-name').textContent = name;
+                body.setAttribute('dir', dir);
+                body.setAttribute('lang', lang);
+                languageDropdown.classList.remove('show');
+                localStorage.setItem('website-language', lang);
+                localStorage.setItem('website-dir', dir);
+            });
+        });
+
+        const savedLang = localStorage.getItem('website-language') || 'fa';
+        const savedDir = localStorage.getItem('website-dir') || 'rtl';
+        body.setAttribute('lang', savedLang);
+        body.setAttribute('dir', savedDir);
+
+        document.addEventListener('click', (e) => {
+            if (!languageSelector.contains(e.target)) {
+                languageDropdown.classList.remove('show');
+            }
+        });
+
+        // ========== MOBILE MENU ==========
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navActions = document.getElementById('navActions');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navActions.classList.toggle('show');
+        });
+
+        // ========== DETAILS VIEW MANAGEMENT ==========
+        const mainGrid = document.getElementById('mainGrid');
+        const detailsView = document.getElementById('detailsView');
+        const detailsTitle = document.getElementById('detailsTitle');
+        const detailsContent = document.getElementById('detailsContent');
+        const backButton = document.getElementById('backToMain');
+
+        const detailsData = {
+            bio: {
+                title: 'بیوگرافی کامل',
+                content: `
+                    <div class="detail-item" style="margin-top: 30px;">
+                        <span class="detail-label">تولد و طفولیت</span>
+                        <div class="detail-text">
+                            روز سه شنبه مورخ ۱۳۷۷/۰۷/۰۷ خورشیدی، در شهر ملایر چشم به جهان گشودم.
+                            <br><br>
+                            در خانواده ای اهل علم و ادب پرورش پیدا کردم. پدرم پزشک بود و من از همان دوران کودکی ناگزیر با این فضا آشنا شدم و علاقه ویژه ای نسبت به پیشه پدرم پیدا کردم؛ تا اندازه ای که خیلی اوقات بازی کردن را رها کرده و به همراه پدرم به مطب او می رفتیم و ساعت ها پروسه ویزیت شدن مریض ها را تماشا می کردم و برایم از هر چیزی جذاب تر بود. حتی نام برخی از بیماران را هنوز در خاطر دارم 🤔
+                        </div>
+                        <br><br>
+                        <span class="detail-label">آغاز علم و مدرسه</span>
+                        <div class="detail-text">
+                            در سال ۱۳۸۴ خورشیدی، در سن ۷ سالگی، دوران تحصیلات ابتدایی اینجانب آغاز شد. نام معلم نازنین کلاس اولم، آقای زندی بود.
+                        </div>
+                        <br><br>
+                        <span class="detail-label">کوچ به کرج</span>
+                        <div class="detail-text">
+                            سال ۱۳۸۷ خورشیدی به کرج آمدیم.
+                        </div>
+                        <br><br>
+                        <span class="detail-label">هنرجو ویولن</span>
+                        <div class="detail-text">
+                            در تابستان سال ۱۳۸۸ به جهت به بطالت نگذشتن وقت، به اصرار مادرم در کلاس موسیقی ثبت نام شدم و بعنوان ساز انتخابی، ویولن را برگزیدم. نخستین معلم موسیقی من که آموزش ویولن را با ایشان آغاز کردم، جناب استاد عباس دادخواه بودند که البته این آموزش تنها به تابستان آن سال ختم نشد و تا سال ها امتداد یافت.
+                            <br><br>
+                            در سال های ۱۳۸۹ و ۱۳۹۰ در کنسرت های هنرجویی که توسط آموزشگاه موسیقی برگزار شده بود بعنوان نوازنده ویولن شرکت کردم و قطعاتی را به همراه سایر هنرجویان به اجرا گذاشتیم.
+                        </div>
+                        <br><br>
+                        <span class="detail-label">کوچ به تهران</span>
+                        <div class="detail-text">
+                            سال ۱۳۹۱ خورشیدی به تهران آمدیم.
+                        </div>
+                        <br><br>
+                        <span class="detail-label">دانشجو</span>
+                        <div class="detail-text">
+                            دانشجوی کارشناسی ارشد هوش مصنوعی و رباتیک با علاقه‌مندی به یادگیری ماشین، پردازش تصویر و توسعه وب. بیش از ۵ سال سابقه کار در زمینه برنامه‌نویسی و طراحی وب‌سایت. مدرس دوره‌های هوش مصنوعی و برنامه‌نویسی در چندین آموزشگاه معتبر.
+                            <br><br>
+                            من به دنبال حل مسائل پیچیده با استفاده از تکنولوژی‌های روز هستم و همیشه سعی می‌کنم در پروژه‌های خود از رویکردهای نوآورانه استفاده کنم. علاقه خاصی به تلفیق هوش مصنوعی با توسعه وب دارم و در این زمینه تحقیقاتی انجام داده‌ام.
+                        </div>
+                    </div>
+                `
+            },
+            skills: {
+                title: 'همه مهارت‌ها',
+                content: `
+                    <div class="detail-skills-container">
+                        <div class="detail-skill-category">
+                            <h3>زبان‌های برنامه‌نویسی</h3>
+                            <div class="detail-skill-grid">
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>JavaScript</span><span>90%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 90%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>Python</span><span>85%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 85%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>TypeScript</span><span>75%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 75%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>HTML/CSS</span><span>95%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 95%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-skill-category">
+                            <h3>فریم‌ورک‌ها و کتابخانه‌ها</h3>
+                            <div class="detail-skill-grid">
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>React/Next.js</span><span>80%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 80%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>Node.js/Express</span><span>75%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 75%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>Django/Flask</span><span>70%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 70%"></div></div>
+                                </div>
+                                <div class="detail-skill-item">
+                                    <div class="detail-skill-name"><span>TensorFlow/PyTorch</span><span>65%</span></div>
+                                    <div class="detail-skill-bar"><div class="detail-skill-level" style="width: 65%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-skill-category">
+                            <h3>ابزارها و تکنولوژی‌ها</h3>
+                            <div class="badge-container">
+                                <span class="detail-badge">Git</span>
+                                <span class="detail-badge">Docker</span>
+                                <span class="detail-badge">Linux</span>
+                                <span class="detail-badge">AWS</span>
+                                <span class="detail-badge">MongoDB</span>
+                                <span class="detail-badge">PostgreSQL</span>
+                                <span class="detail-badge">Redis</span>
+                                <span class="detail-badge">Jupyter</span>
+                                <span class="detail-badge">VS Code</span>
+                                <span class="detail-badge">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            experience: {
+                title: 'تجربیات شغلی کامل',
+                content: `
+                    <div class="detail-timeline">
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۲۰۲۱ - اکنون</div>
+                            <div class="detail-timeline-content">
+                                <h3>توسعه‌دهنده ارشد و محقق هوش مصنوعی</h3>
+                                <p><strong>شرکت فناوری اطلاعات پیشرو</strong></p>
+                                <ul>
+                                    <li>طراحی و پیاده‌سازی سیستم‌های تشخیص چهره با شبکه‌های عصبی عمیق</li>
+                                    <li>توسعه APIهای هوشمند برای پردازش تصاویر در لحظه</li>
+                                    <li>بهینه‌سازی الگوریتم‌های یادگیری ماشین</li>
+                                    <li>مدیریت تیم ۵ نفره از توسعه‌دهندگان</li>
+                                </ul>
+                                <p><small>دستاوردها: افزایش دقت تشخیص چهره به ۹۸٪</small></p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۲۰۱۹ - ۲۰۲۱</div>
+                            <div class="detail-timeline-content">
+                                <h3>توسعه‌دهنده وب فول استک</h3>
+                                <p><strong>استارت‌آپ تکنولوژی</strong></p>
+                                <ul>
+                                    <li>توسعه پلتفرم آموزش آنلاین با React و Node.js</li>
+                                    <li>طراحی و پیاده‌سازی پایگاه داده MongoDB</li>
+                                    <li>بهینه‌سازی عملکرد وب‌سایت (افزایش سرعت ۴۰٪)</li>
+                                </ul>
+                                <p><small>دستاوردها: جذب ۱۰۰۰۰ کاربر در ۶ ماه اول</small></p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۲۰۱۷ - ۲۰۱۹</div>
+                            <div class="detail-timeline-content">
+                                <h3>برنامه‌نویس و مدرس</h3>
+                                <p><strong>شرکت نرم‌افزاری و آموزشگاه</strong></p>
+                                <ul>
+                                    <li>توسعه اپلیکیشن‌های موبایل با React Native</li>
+                                    <li>تدریس دوره‌های برنامه‌نویسی وب و پایتون</li>
+                                    <li>آموزش به بیش از ۲۰۰ دانشجو</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            projects: {
+                title: 'همه پروژه‌ها',
+                content: `
+                    <div class="detail-projects-grid">
+                        <div class="detail-project-card">
+                            <div class="detail-project-image">AI</div>
+                            <div class="detail-project-info">
+                                <h3>سیستم تشخیص هوشمند چهره</h3>
+                                <p>تشخیص چهره با دقت ۹۸٪ با استفاده از شبکه‌های عصبی کانولوشنال</p>
+                                <p><strong>تکنولوژی‌ها:</strong> Python, TensorFlow, OpenCV, Flask</p>
+                            </div>
+                        </div>
+                        <div class="detail-project-card">
+                            <div class="detail-project-image">CMS</div>
+                            <div class="detail-project-info">
+                                <h3>سیستم مدیریت محتوای پیشرفته</h3>
+                                <p>CMS اختصاصی با قابلیت مدیریت کاربران و محتوا</p>
+                                <p><strong>تکنولوژی‌ها:</strong> React, Node.js, MongoDB, Redis</p>
+                            </div>
+                        </div>
+                        <div class="detail-project-card">
+                            <div class="detail-project-image">BOT</div>
+                            <div class="detail-project-info">
+                                <h3>ربات گفتگوی هوشمند</h3>
+                                <p>چت‌بات پشتیبانی مشتریان با قابلیت یادگیری</p>
+                                <p><strong>تکنولوژی‌ها:</strong> Python, NLP, Transformers, Django</p>
+                            </div>
+                        </div>
+                        <div class="detail-project-card">
+                            <div class="detail-project-image">APP</div>
+                            <div class="detail-project-info">
+                                <h3>اپلیکیشن مدیریت وظایف</h3>
+                                <p>اپلیکیشن موبایل برای مدیریت پروژه‌های تیمی</p>
+                                <p><strong>تکنولوژی‌ها:</strong> React Native, Node.js, Socket.io</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            publications: {
+                title: 'مقالات و تألیفات',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h2>نگارش مقاله</h2>
+                            <h3>"حیطه پزشکی  "</h3>
+                            <p><strong>۲۰۲۳</strong>فعلا هیچ</p>
+                            <p>هیچ</p>
+                            <h3>"حیطه هوش مصنوعی "</h3>
+                            <p><strong>۲۰۲۳</strong>فعلا هیچ</p>
+                            <p>هیچ</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h2>نگارش کتاب</h2>
+                            <h3>"حیطه پزشکی  "</h3>
+                            <p><strong>۲۰۲۳</strong>کتاب بزرگ نوروساینس</p>
+                            <p>مشارکت در نگارش</p>
+                            <h3>"حیطه هوش مصنوعی "</h3>
+                            <p><strong>۲۰۲۳</strong>فعلا هیچ</p>
+                            <p>هیچ</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h2>ترجمه کتاب</h2>
+                            <h3>"حیطه پزشکی"</h3>
+                            <p><strong>۲۰۲۳</strong>فعلا هیچ</p>
+                            <p>هیچ</p>
+                            <h3>"حیطه هوش مصنوعی "</h3>
+                            <p><strong>۲۰۲۳</strong>فعلا هیچ</p>
+                            <p>هیچ</p>
+                        </div>
+                    </div>
+                `
+            },
+            education: {
+                title: 'تحصیلات کامل',
+                content: `
+                    <div class="detail-timeline">
+                        <h2 style="font-size:1.8rem; margin:40px 0 20px; color:var(--primary-color);">تحصیلات آکادمیک</h2>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۴۰۳ - اکنون</div>
+                            <div class="detail-timeline-content">
+                                <h3>کارشناسی ارشد - هوش مصنوعی و رباتیک</h3>
+                                <p><strong><a href="https://semnan.ac.ir/" target="_blank" style="color:var(--primary-color);">دانشگاه سمنان</a> - سمنان - ایران</strong></p>
+                                <p>معدل: ۱۵.۵ از ۲۰</p>
+                                <p>سمینار: شبکه‌های عصبی مبتنی بر HyperNEAT برای رمزگشایی سیگنال مغز در BCI</p>
+                                <p>استاد سمینار: <a href="https://rahmanimanesh.profile.semnan.ac.ir/#about_me" target="_blank" style="color:var(--primary-color);">جناب دکتر محمد رحمانی منش</a></p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۳۹۷ - ۱۴۰۳</div>
+                            <div class="detail-timeline-content">
+                                <h3>کارشناسی - فناوری اطلاعات</h3>
+                                <p><strong><a href="https://iranian.ac.ir/" target="_blank" style="color:var(--primary-color);">موسسه آموزش عالی الکترونیکی ایرانیان</a> - تهران - ایران</strong></p>
+                                <p>معدل: ۱۵.۸ از ۲۰</p>
+                                <p>پروژه: معرفی و آموزش تعدادی از گجت های هوش مصنوعی</p>
+                                <p>استاد پروژه: <a href="https://faradars.org/instructors/fatemeh-sadat-sabeti-fard" target="_blank" style="color:var(--primary-color);">سرکار خانم فاطمه ثابتی فرد</a></p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۳۹۵ - ۱۳۹۶</div>
+                            <div class="detail-timeline-content">
+                                <h3>پیش دانشگاهی</h3>
+                                <p><strong>دبیرستان شهید مطهری - تهران - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۳۹۲ - ۱۳۹۵</div>
+                            <div class="detail-timeline-content">
+                                <h3>متوسطه</h3>
+                                <p><strong> سوم دبیرستان ⇠ دبیرستان شهید مطهری  - تهران - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                                <p><strong> دوم دبیرستان ⇠ دبیرستان شهید مطهری  - تهران  - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                                <p><strong> اول دبیرستان ⇠ دبیرستان شهید مطهری  - تهران  - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                                <p>پروژه: سیستم مدیریت محتوای اختصاصی</p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۳۸۹ - ۱۳۹۲</div>
+                            <div class="detail-timeline-content">
+                                <h3>راهنمایی</h3>
+                                <p><strong> سوم راهنمایی ⇠ مدرسه سما - تهران - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                                <p><strong> دوم راهنمایی ⇠ مدرسه سهروردی - اندیشه کرج - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                                <p><strong> اول راهنمایی ⇠ مدرسه سهروردی - اندیشه کرج - ایران</strong></p>
+                                <p>معدل: ۱۷.۸ از ۲۰</p>
+                            </div>
+                        </div>
+                        <div class="detail-timeline-item">
+                            <div class="detail-timeline-date">۱۳۸۴ - ۱۳۸۹</div>
+                            <div class="detail-timeline-content">
+                                <h3>دبستان</h3>
+                                <p><strong> پنجم دبستان ⇠ مدرسه هادی - اندیشه کرج - ایران</strong></p>
+                                <p>معدل: ۲۰ از ۲۰</p>
+                                <p><strong> چهارم دبستان ⇠ مدرسه هادی - اندیشه کرج - ایران</strong></p>
+                                <p>معدل: ۲۰ از ۲۰</p>
+                                <p><strong> سوم دبستان ⇠ مدرسه شاهد - ملایر  - ایران</strong></p>
+                                <p>معدل: ۲۰ از ۲۰</p>
+                                <p><strong> دوم دبستان ⇠ مدرسه شاهد - ملایر - ایران</strong></p>
+                                <p>معدل: ۲۰ از ۲۰</p>
+                                <p><strong> اول دبستان ⇠ مدرسه شاهد - ملایر  - ایران</strong></p>
+                                <p>معدل: ۲۰ از ۲۰</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 style="font-size:1.8rem; margin:40px 0 20px; color:var(--primary-color);">گواهینامه‌ها</h2>
+                    <div class="badge-container">
+                        <span class="detail-badge">هوش مصنوعی - کورسرا</span>
+                        <span class="detail-badge">یادگیری عمیق - Udacity</span>
+                        <span class="detail-badge">React - Meta</span>
+                    </div>
+                `
+            },
+            language: {
+                title: 'زبان‌های مسلط',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h3>فارسی</h3>
+                            <p><strong>زبان مادری</strong></p>
+                            <p>مسلط به نگارش و مکالمه</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>انگلیسی</h3>
+                            <p><strong>TOEFL: 110</strong></p>
+                            <p>مسلط به مکالمه، نگارش و ترجمه تخصصی</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>فرانسوی</h3>
+                            <p><strong>DELF: 100</strong></p>
+                            <p>توانایی مکالمه و درک مطلب</p>
+                        </div>
+                    </div>
+                `
+            },
+            membership: {
+                title: 'عضویت‌ها',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h3>انجمن کامپیوتر ایران</h3>
+                            <p><strong>عضو پیوسته</strong> - از ۱۴۰۰</p>
+                            <p>عضویت در کارگروه هوش مصنوعی</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>IEEE</h3>
+                            <p><strong>عضویت دانشجویی</strong> - از ۱۴۰۱</p>
+                            <p>عضو انجمن IEEE Computer Society</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>انجمن علمی کامپیوتر دانشگاه سمنان</h3>
+                            <p><strong>عضو شورای مرکزی</strong> - ۱۴۰۳</p>
+                        </div>
+                    </div>
+                `
+            },
+            assemblies: {
+                title: 'مجامع و رویدادها',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h3>کنفرانس بین‌المللی هوش مصنوعی</h3>
+                            <p><strong>۱۴۰۲</strong> - ارائه مقاله و سخنرانی</p>
+                            <p>دریافت جایزه بهترین مقاله دانشجویی</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>همایش سالانه توسعه‌دهندگان وب ایران</h3>
+                            <p><strong>۱۴۰۱ و ۱۴۰۲</strong> - سخنران و مدرس کارگاه</p>
+                            <p>ارائه کارگاه "هوش مصنوعی در وب"</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>مسابقات برنامه‌نویسی ACM</h3>
+                            <p><strong>۱۳۹۹</strong> - شرکت کننده و مربی تیم</p>
+                            <p>کسب رتبه دوم منطقه</p>
+                        </div>
+                    </div>
+                `
+            },
+            awards: {
+                title: 'جوایز و افتخارات',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h3>بهترین مقاله دانشجویی</h3>
+                            <p><strong>۱۴۰۲</strong> - کنفرانس بین‌المللی هوش مصنوعی</p>
+                            <p>برای مقاله "کاربرد هوش مصنوعی در تشخیص زودهنگام بیماری‌ها"</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>رتبه اول مسابقات برنامه‌نویسی</h3>
+                            <p><strong>۱۴۰۱</strong> - دانشگاه تهران</p>
+                            <p>مسابقات برنامه‌نویسی دانشجویی</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>استعداد درخشان</h3>
+                            <p><strong>۱۳۹۸ تا ۱۴۰۳</strong> - دانشگاه ایرانیان</p>
+                            <p>تسهیلات ویژه برای دانشجویان ممتاز</p>
+                        </div>
+                    </div>
+                `
+            },
+            interest: {
+                title: 'علاقه‌مندی‌ها',
+                content: `
+                    <div class="detail-publications-list">
+                        <div class="detail-publication-item">
+                            <h3>مطالعه کتب علمی</h3>
+                            <p>علاقه‌مند به فیزیک، نجوم و فلسفه علم</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>نواختن ویولن</h3>
+                            <p>۱۰ سال سابقه، اجرا در کنسرت‌های متعدد</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>سفر و عکاسی</h3>
+                            <p>علاقه‌مند به طبیعت‌گردی و عکاسی از مناظر طبیعی</p>
+                        </div>
+                        <div class="detail-publication-item">
+                            <h3>مطالعه رمان</h3>
+                            <p>علاقه‌مند به رمان‌های تاریخی و فلسفی</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        window.showDetails = function(section) {
+            if (detailsData[section]) {
+                detailsTitle.textContent = detailsData[section].title;
+                detailsContent.innerHTML = detailsData[section].content;
+                mainGrid.style.display = 'none';
+                detailsView.style.display = 'block';
+                window.scrollTo(0, 0);
+                
+                setTimeout(() => {
+                    document.querySelectorAll('.detail-skill-level').forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                }, 300);
+            }
+        };
+
+        function hideDetails() {
+            mainGrid.style.display = 'grid';
+            detailsView.style.display = 'none';
+        }
+
+        backButton.addEventListener('click', hideDetails);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && detailsView.style.display === 'block') {
+                hideDetails();
+            }
+        });
+
+        // ========== COPY EMAIL ==========
+        window.copyEmail = function() {
+            const email = 'ali.rezaei1397a@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('آدرس ایمیل کپی شد: ' + email);
+            });
+        };
+
+        // ========== ANIMATE SKILL BARS ==========
+        function animateSkillBars() {
+            document.querySelectorAll('.skill-level').forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(animateSkillBars, 500);
+        });
+
+        // ========== TOUCH SUPPORT ==========
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50 && diff > 0) {
+                themeMenu.classList.remove('show');
+                languageDropdown.classList.remove('show');
+            }
+        });
+
+        // ========== PROGRESSIVE ENHANCEMENT ==========
+        if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
+            document.querySelectorAll('.card, .theme-menu, .language-dropdown, .details-content').forEach(el => {
+                el.style.backgroundColor = 'var(--card-bg)';
+                el.style.opacity = '0.95';
+            });
+        }
+
+        // ========== SPECIAL EFFECTS FOR THEMES ==========
+        function createThemeEffects() {
+            const theme = body.getAttribute('data-theme');
+            document.querySelectorAll('.theme-effect').forEach(el => el.remove());
+            
+            if (theme === 'cyberpunk') {
+                const container = document.createElement('div');
+                container.className = 'theme-effect';
+                container.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-1; overflow:hidden;';
+                for (let i = 0; i < 5; i++) {
+                    const line = document.createElement('div');
+                    line.style.cssText = 'position:absolute; width:100%; height:1px; background:linear-gradient(90deg, transparent, #00ff00, transparent); top:' + Math.random() * 100 + '%; animation:scanLine ' + (Math.random() * 3 + 2) + 's linear infinite; opacity:' + (Math.random() * 0.3 + 0.1);
+                    container.appendChild(line);
+                }
+                document.body.appendChild(container);
+            } else if (theme === 'light') {
+                const container = document.createElement('div');
+                container.className = 'theme-effect';
+                container.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-1; background:radial-gradient(circle at 20% 50%, rgba(255,107,139,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(78,205,196,0.1) 0%, transparent 50%); filter:blur(40px);';
+                document.body.appendChild(container);
+            }
+        }
+
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    setTimeout(createThemeEffects, 100);
+                }
+            });
+        });
+        observer.observe(body, { attributes: true });
+        createThemeEffects();
+    </script>
+</body>
+</html>
